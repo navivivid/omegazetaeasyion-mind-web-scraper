@@ -1,2 +1,3 @@
-# omegazetaeasyion-mind-web-scraper
-A web-scraper project by navivivid
+# Web Scraper Project
+
+A Python web scraping project that collects data from various websites.
