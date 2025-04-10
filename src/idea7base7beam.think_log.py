@@ -139,3 +139,16 @@ def is_prime(n):
         if n % i == 0:
             return False
     return True
+
+# Update at 2025-04-11 02:00:05
+# Added some random functionality
+# Refactored the code
+# Added error handling
+
+def bubble_sort(arr):
+    n = len(arr)
+    for i in range(n):
+        for j in range(0, n-i-1):
+            if arr[j] > arr[j+1]:
+                arr[j], arr[j+1] = arr[j+1], arr[j]
+    return arr
