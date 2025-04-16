@@ -231,3 +231,14 @@ def is_prime(n):
         if n % i == 0:
             return False
     return True
+
+# Update at 2025-04-16 12:09:07
+# Optimized the algorithm
+import hashlib
+
+def hash_password(password):
+    salt = "random_salt"
+    return hashlib.sha256((password + salt).encode()).hexdigest()
+
+def verify_password(password, hashed):
+    return hash_password(password) == hashed
