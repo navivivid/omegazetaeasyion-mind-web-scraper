@@ -540,3 +540,18 @@ def save_to_json(data, filename):
 def load_from_json(filename):
     with open(filename, 'r') as f:
         return json.load(f)
+
+# Update at 2025-05-04 14:27:08
+# Added some random functionality
+# Added error handling
+def binary_search(arr, target):
+    left, right = 0, len(arr) - 1
+    while left <= right:
+        mid = (left + right) // 2
+        if arr[mid] == target:
+            return mid
+        elif arr[mid] < target:
+            left = mid + 1
+        else:
+            right = mid - 1
+    return -1
