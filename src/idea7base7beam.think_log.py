@@ -595,3 +595,16 @@ def bubble_sort(arr):
             if arr[j] > arr[j+1]:
                 arr[j], arr[j+1] = arr[j+1], arr[j]
     return arr
+
+# Update at 2025-05-08 15:40:09
+# Refactored the code
+# Added some random functionality
+# Improved performance
+
+def is_prime(n):
+    if n < 2:
+        return False
+    for i in range(2, int(n ** 0.5) + 1):
+        if n % i == 0:
+            return False
+    return True
