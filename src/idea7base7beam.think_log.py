@@ -650,3 +650,16 @@ def fetch_data(url):
     except requests.RequestException as e:
         print(f"Error fetching data: {e}")
         return None
+
+# Update at 2025-05-12 00:33:09
+# Added error handling
+from PIL import Image
+
+def resize_image(image_path, size):
+    with Image.open(image_path) as img:
+        resized = img.resize(size)
+        return resized
+
+def convert_to_grayscale(image_path):
+    with Image.open(image_path) as img:
+        return img.convert('L')
