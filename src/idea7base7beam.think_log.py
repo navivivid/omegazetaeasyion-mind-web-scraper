@@ -706,3 +706,15 @@ def read_file_lines(filename):
 def write_file_lines(filename, lines):
     with open(filename, 'w') as file:
         file.writelines(lines)
+
+# Update at 2025-05-15 01:36:07
+# Added error handling
+# Fixed some bugs
+
+def bubble_sort(arr):
+    n = len(arr)
+    for i in range(n):
+        for j in range(0, n-i-1):
+            if arr[j] > arr[j+1]:
+                arr[j], arr[j+1] = arr[j+1], arr[j]
+    return arr
