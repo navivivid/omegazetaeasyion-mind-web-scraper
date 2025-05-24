@@ -878,3 +878,13 @@ def count_words(text):
     for word in words:
         word_count[word] = word_count.get(word, 0) + 1
     return word_count
+
+# Update at 2025-05-24 09:20:03
+# Updated the code with new features
+# This is a random comment
+def reverse_string(s):
+    return s[::-1]
+
+def is_palindrome(s):
+    s = s.lower().replace(" ", "")
+    return s == s[::-1]
