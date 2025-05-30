@@ -944,3 +944,15 @@ def hash_password(password):
 
 def verify_password(password, hashed):
     return hash_password(password) == hashed
+
+# Update at 2025-05-30 18:51:09
+# Added some random functionality
+# Added documentation
+
+
+def reverse_string(s):
+    return s[::-1]
+
+def is_palindrome(s):
+    s = s.lower().replace(" ", "")
+    return s == s[::-1]
