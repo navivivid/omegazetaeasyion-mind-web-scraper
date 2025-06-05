@@ -1065,3 +1065,17 @@ async def fetch_data_async(url):
 async def process_multiple_urls(urls):
     tasks = [fetch_data_async(url) for url in urls]
     return await asyncio.gather(*tasks)
+
+# Update at 2025-06-05 21:52:11
+# This is a random comment
+
+
+from datetime import datetime, timedelta
+
+def get_date_range(start_date, end_date):
+    date_list = []
+    current_date = start_date
+    while current_date <= end_date:
+        date_list.append(current_date)
+        current_date += timedelta(days=1)
+    return date_list
