@@ -1140,3 +1140,18 @@ def create_table(conn):
         conn.commit()
     except sqlite3.Error as e:
         print(e)
+
+# Update at 2025-06-10 01:24:07
+# Updated the code with new features
+# Added unit tests
+
+
+import re
+
+def validate_email(email):
+    pattern = r'^[\w\.-]+@[\w\.-]+\.\w+$'
+    return bool(re.match(pattern, email))
+
+def extract_phone_numbers(text):
+    pattern = r'\d{3}-\d{3}-\d{4}'
+    return re.findall(pattern, text)
