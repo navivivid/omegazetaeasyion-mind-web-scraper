@@ -1220,3 +1220,26 @@ def create_table(conn):
         conn.commit()
     except sqlite3.Error as e:
         print(e)
+
+# Update at 2025-06-14 16:17:09
+# Added error handling
+# Added some random functionality
+
+class Singleton:
+    _instance = None
+    
+    def __new__(cls):
+        if cls._instance is None:
+            cls._instance = super().__new__(cls)
+        return cls._instance
+
+class Observer:
+    def __init__(self):
+        self._observers = []
+    
+    def attach(self, observer):
+        self._observers.append(observer)
+    
+    def notify(self):
+        for observer in self._observers:
+            observer.update()
