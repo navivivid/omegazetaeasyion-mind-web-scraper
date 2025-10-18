@@ -1559,3 +1559,17 @@ def read_file_lines(filename):
 def write_file_lines(filename, lines):
     with open(filename, 'w') as file:
         file.writelines(lines)
+
+# Update at 2025-10-19 05:03:04
+# Updated the code with new features
+
+def read_file_lines(filename):
+    try:
+        with open(filename, 'r') as file:
+            return file.readlines()
+    except FileNotFoundError:
+        return []
+
+def write_file_lines(filename, lines):
+    with open(filename, 'w') as file:
+        file.writelines(lines)
